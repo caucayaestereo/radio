@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1" />
+    <meta property="og:description" content="Radio Digital una plataforma online con musica variada" />
+    <meta name="keywords" content="Radio Digital, Pereira Colombia, radio online, artistas" />
+    <meta property="og:site_name" content="https://radiodigital.com">
+    <meta property="og:image" content="https://www.radiodigital.com/logo.png">
+	<title>Radio Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=arial:ital,wght@0,300;0,500;0,600;1,300&display=swap"
+        rel="stylesheet">
+     
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/fonts-icon.css">
+    <link type="text/css" rel="stylesheet" href="css/owl.carousel.min.css">
+    <link type="text/css" rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+	<script src="js/jquery 1.9.0.min.js"></script>
+	<link rel="stylesheet" href="css/lightbox.min.css">
+	<script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    <script src="js/galeria.js"></script>
+
+	
+	<script src="https://www.youtube.com/iframe_api"></script>
+	
+	<script>
+	$(document).ready(function () {
+		setUpSlider($('#slider1'));
+	})
+
+	function setUpSlider($container) {
+		var pos = 0,
+			slides = $container.find('.slide'),
+			numOfSlides = slides.length;
+
+		function nextSlide() {
+			slides[pos].video.stopVideo()
+			slides.eq(pos).animate({ left: '-100%' }, 500);
+			pos = (pos >= numOfSlides - 1 ? 0 : ++pos);
+			slides.eq(pos).css({ left: '100%' }).animate({ left: 0 }, 500);
+		}
+
+		function previousSlide() {
+			slides[pos].video.stopVideo()
+			slides.eq(pos).animate({ left: '100%' }, 500);
+			pos = (pos == 0 ? numOfSlides - 1 : --pos);
+			slides.eq(pos).css({ left: '-100%' }).animate({ left: 0 }, 500);
+		}
+
+		$container.find('.left').click(previousSlide);
+		$container.find('.right').click(nextSlide);
+	}
+
+	function onYouTubeIframeAPIReady() {
+		$('.slide').each(function (index, slide) {
+			var iframe = $(slide).find('.video')[0]
+			slide.video = new YT.Player(iframe)
+		})
+	}
+	</script>
+	
+	
+	<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v17.0" nonce="IrKiRKVF"></script>
+
+ <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6116874493728615"
+ crossorigin="anonymous"></script>
+
+	
+</head>
+
+
+<body>
+
+    <div id="arrow">
+        <i class="fa fa-arrow-up"></i>
+    </div>
+	
+	
+    <nav class="menu">	
+ 
+     <div class="logo-box">
+	  
+       <div id="radio">
+          <audio src="http://stream.zeno.fm/t100n9re6bruv" autoplay="true"></audio>
+		   
+		   <div id="cont">
+		  <div id="ppbutton" class="icon-play2"> </div>
+		 </div>
+      </div>
+	  </div>
+	   
+	<script>
+	
+	$(
+  function(){
+
+var previous = 'first load';
+
+
+songinfo();
+
+setInterval(function() {
+	songinfo();
+}, 1000);
+
+function songinfo(){
+
+		if(location.hash == '#play' && $('audio')[0].paused){
+			$('audio')[0].play();
+			$('#ppbutton').removeClass('icon-play2');
+			$('#ppbutton').addClass(' icon-pause');
+		}
+	                      
+}
+
+var aud = $('audio')[0];
+$('#ppbutton').on('click', function(){
+	if (aud.paused) {
+		aud.play();
+		$('#ppbutton').removeClass('icon-play2');
+		$('#ppbutton').addClass('icon-pause');
+		location.hash = '#play';
+	}
+	else {
+		aud.pause();
+		$('#ppbutton').removeClass('icon-pause');
+		$('#ppbutton').addClass('icon-play2');
+		location.hash = '#stop';
+	}
+});
+
+
+});
+
+	</script>
+	
+
+
+     </div>
+	  
+	 
+	<div class="nav-menu" class="menu-fixed">
+	
+     <div class="list-container">
+	
+        <ul class="lists">
+		
+	
+        <li><a class='activo'><span class="icon-mobile"></span>Radio Digital</a></li>
+	 
+	    </ul>
+		
+		
+     </div>
+	 
+	 </div>
+    </nav>
+
+	
+	</body>
+	
+	
+	  <section id="contenido">
+	  
+	    <article id="inicio" class="elemento visible">
+	
+    <header>
+        <div class="container">
+		
+            <div class="header-info-par">
+	  
+                <h1 class="typewrite" data-period="2000"
+                    data-type='["Somos una plataforma","con variedad musical","Sintonizanos, para complacerte."]'>
+                </h1>
+                <p>Musica variada sin límites.</p>
+		
+				<div class="fb-like" data-href="https://www.facebook.com/profile.php?id=100094430634319" data-width="" data-layout="button_count" data-action="like" data-size="small" data-share="false"></div>		  
+		
+            </div>
+			
+            <div class="video">
+                <video id="video" autoplay loop muted>
+                    <source src="images/travel-video.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+    </header>
+	
+	
+	<section id="bloggers">
+     <h3>NOSOTROS</h3>
+				
+	<div class="contenido_block">
+	
+		<section class="radio">
+			 <div class="slideshow">
+              <div class="mySlides1" >
+                 <img src="images/objetivo/1.jpg">
+                <!-- <div class="note">
+                  <p></p>
+                </div>-->
+              </div>
+
+              <div class="mySlides1" >
+                     <img src="images/objetivo/2.jpg">
+                <!--<div class="note">
+                  <p></p>
+                </div>-->
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+            </div>
+
+		     <h4>Objetivo</h4>
+            <p>Promover una propuesta musical con la finalidad de difundir diversos artistas, para enriquecer el mundo de la música e impactar a través de la diversidad de la misma, fomentando la riqueza cultural y musical de Colombia e Hispanoamérica. </p>	
+
+    </section> 
+	
+					
+		<section class="radio">
+             <div class="slideshow">
+              <div class="mySlides2">
+                   <img src="images/mision/1.jpg">
+               <!-- <div class="note">
+                  <p></p>
+                </div>-->
+              </div>
+
+              <div class="mySlides2">
+                    <img src="images/mision/2.jpg">
+                <!-- <div class="note">
+                  <p></p>
+                </div-->
+              </div>
+
+         
+              <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+            </div>
+        
+		   <h4>Visión</h4>
+           <p>Radio Digital una plataforma online, que trasmite musica 24 horas, para vivir una experiencia inolvidable con los exitos que no pasan de moda.</p> 
+	 
+	   </section>
+					
+        <section class="radio">
+
+              <div class="slideshow">
+              <div class="mySlides3">
+                    <img src="images/vision/1.jpg">
+               <!-- <div class="note">
+                  <p></p>
+                </div>-->
+              </div>
+
+              <div class="mySlides3">
+                    <img src="images/vision/2.jpg">
+             <!-- <div class="note">
+                  <p></p>
+                </div>-->
+              </div>
+         
+              <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
+            </div>
+       
+		   <h4>Visión</h4>
+           <p>Compartir mediante a traves de este medio online, temas artísticos,  
+			 para formentar nuestra cultural musical tanto de Colombia y el mundo.</p>
+		
+	
+	  </section>
+	 
+	 </div>
+	 			
+ </section>
+ 
+	<section class="boxes-portfolios" id="fans">	
+	
+        <div class="caja-portfolios">
+         
+           <div class="fb_background">		   
+  		
+          	<div class="fb-page" data-href="https://www.facebook.com/profile.php?id=100094430634319" data-tabs="timeline" data-width="300" data-height="380" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/profile.php?id=100094430634319" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/profile.php?id=100094430634319">Fans Page</a></blockquote></div>
+		   
+		   </div>
+		 </div>
+		
+
+		  <div class="caja-portfolios">
+         
+		    <div class="fb_background">	
+			
+	    <div class="video-slider" id="slider1">
+		
+		<div class="slide">
+			<iframe class="video" src="https://www.youtube.com/embed/XLetEdAbXPE?ecver=2&enablejsapi=1"></iframe>
+		</div>
+	
+		<div class="slide">
+			<iframe class="video" src="https://www.youtube.com/embed/XLetEdAbXPE?enablejsapi=1&html5=1&rel=0"></iframe>
+		</div>
+	
+		
+		<div class="slide-arrow left"></div>
+		<div class="slide-arrow right"></div>
+	   </div>
+	
+	   </div>
+		  
+      </div>
+	  
+
+     </section>	
+	
+	
+		 
+   <section class="carousel">
+
+    <h3>VARIEDADES</h3>
+
+    <div class="owl-carousels_1 owl-theme">
+     
+     <div class="items">
+    
+	  <div class="productos_1 prod-first">  
+        <img src="images/actividades/1.jpg"> 
+        <div class="mask">  
+         <h2>Homenaje Religioso</h2>   
+         <p>Fiesta Mariana del Carmen</p>
+		 
+         <div class="date-card">
+           <div class="day">08</div>
+          <div>
+         <div class="month">Julio</div>
+          <div class="year">2023</div>
+          </div>
+         </div>
+				   
+        <!-- <a class="info"><audio controls src="https://docs.google.com/uc?export=download&id="></a> -->
+		   
+         </div>  
+       </div>
+	   
+     </div>
+	   
+	   
+	<div class="items">
+    
+	  <div class="productos_1 prod-first">  
+         <img src="images/actividades/2.jpg"> 
+        <div class="mask">  
+         <h2>Día de la Independencia</h2>  
+          <p>Desfile de los estudiantes el 20 de Julio</p>
+		 
+		  <div class="date-card">
+           <div class="day">20</div>
+          <div>
+         <div class="month">Julio</div>
+          <div class="year">2023</div>
+          </div>
+         </div>
+		 
+         </div>  
+       </div>
+	   
+     </div>
+	 
+	 
+     
+      <div class="items">
+    
+	  <div class="productos_1 prod-first">  
+         <img src="images/actividades/3.jpg"> 
+        <div class="mask">  
+         <h2>Paisaje</h2>  
+        <p>Cuida el medio ambiente: la flora y fauna</p>
+	   
+	     <div class="date-card">
+           <div class="day"></div>
+          <div>
+         <div class="month">Deber día a día</div>
+          <div class="year">2023</div>
+          </div>
+         </div>
+		
+       </div>  
+       </div>
+	   
+      </div>
+    
+    </div>
+   
+</div> 
+
+
+
+  <script src="owl/owl.carousel.min.js"></script>
+
+  <script>
+    $('.owl-carousels_1').owlCarousel({
+      margin: 15,
+       loop: true,
+       autoplay:false,
+      nav: true,
+      navText: [""],
+      responsive: {
+        0: {
+          items: 1
+        },
+        580: {
+          items: 2
+        },
+        1000: {
+          items: 3
+        }
+      }
+    });
+  </script>
+  
+  
+  </section>
+	
+	
+	 <section class="containers scrollflow -slide-top">
+      <div class="header-video">
+        <video src="videos/demovideo.mp4" muted autoplay loop></video>
+      </div>
+      <div class="header-overlay"></div>
+      <div class="header-containex">
+        <h1>Radio Digital</h1>
+        <p>Musica para alegrar los corazones.</p>
+        <a class="btn" href="https://onlineradiobox.com/co/lafronterisima/?cs=co.lafronterisima" target="_blank" class="btn">Síguenos</a>
+      </div>
+    </section>
+	
+	
+	
+	   <section class="flexbox-videos" >
+	
+	   <div class="videos">
+	     <h3>EXTRENOS</h3>
+		  <div class="postcast">
+
+         <iframe id="sc-widget" src="https://w.soundcloud.com/player/?url=https://api.soundcloud.com/users/125486431/favorites" width="100%" height="auto" scrolling="yes" frameborder="no"></iframe>
+
+          <script type="text/javascript">
+            (function(){
+             var widgetIframe = document.getElementById('sc-widget'),
+             widget = SC.Widget(widgetIframe);
+
+             widget.bind(SC.Widget.Events.READY, function() {
+             widget.bind(SC.Widget.Events.PLAY, function() {
+     
+             widget.getCurrentSound(function(currentSound) {
+             console.log('sound ' + currentSound.get('') + 'began to play');
+            });
+          });
+     
+          widget.getVolume(function(volume) {
+          console.log('current volume value is ' + volume);
+          });
+ 
+         widget.setVolume(95);
+     
+        });
+
+      }());
+     </script>
+
+   </div>
+		
+		</div>
+			
+		
+		<div class="videos">
+		   <h3 >PROMO</h3>
+		   <div class="youtube-player">
+		 
+			  <iframe id="sc-widget" src="https://youtube.com/embed/j9Sp9UDIiv4?html5=1&enablejsapi=1"></iframe>
+		   
+		   </div>
+		  
+	    </div>
+
+     </section>
+	 
+	 
+	  <section id="wrap_galery">
+
+    <section class="imagen-web">
+      <a class="example-image-link" id="lightbox-img" href="images/galeria/1.jpg" data-lightbox="example-set" data-title=""><img class="example-image" src="images/galeria/1.jpg"  title="Locución"></a>
+    </section>
+    <section class="imagen-web">
+      <a class="example-image-link" id="lightbox-img" href="images/galeria/2.jpg" data-lightbox="example-set" data-title=""><img class="example-image" src="images/galeria/2.jpg" alt="#" title="Atardecer"/></a>
+    </section>
+    <section class="imagen-web">
+      <a class="example-image-link" id="lightbox-img" href="images/galeria/3.jpg" data-lightbox="example-set" data-title=""><img class="example-image" src="images/galeria/3.jpg" alt="#" title="Paisaje"/></a>
+    </section>
+   
+    <section class="imagen-web">
+      <a class="example-image-link" id="lightbox-img" href="images/galeria/4.jpg" data-lightbox="example-set" data-title="Actividades"><img class="example-image" src="images/galeria/4.jpg" alt="#" title=""/></a>
+    </section>
+    <section class="imagen-web">
+      <a class="example-image-link" id="lightbox-img" href="images/galeria/5.jpg" data-lightbox="example-set" data-title=""><img class="example-image" src="images/galeria/5.jpg" alt="#" title=""/></a>
+    </section>
+    <section class="imagen-web">
+      <a class="example-image-link" id="lightbox-img" href="images/galeria/6.jpg" data-lightbox="example-set" data-title=""><img class="example-image" src="images/galeria/6.jpg" alt="#" title=""/></a>
+    </section>
+   
+  </section>
+	
+
+ 
+	
+   <footer>
+		<div class="footer-container">
+			<div class="footer-main">
+				<div class="footer-columna">
+					<h3>Contacto</h3>
+				   <form action="" method="" id="formulario">
+					  <input type="email" name="email" id="email" placeholder="Ingresa su correo" required>
+				      <textarea type="text" name="mensajes" id="mensajes" placeholder="Ingresa su mensaje" required></textarea>
+					  <input type="submit" value="Enviar" id="submit">
+					
+				    </form>
+				   
+				</div>
+
+				<div class="footer-columna">
+					<h3>Dirección</h3>
+				<span class="fa fa-map-marker"><p> Pereira - Risaralda</p></span><br>	
+			    <span class="fa fa-map-marke"><p> Colombia</p></span><br>	
+				</div>
+
+				<div class="footer-columna">
+					<h3>Mapa</h3>
+				<div class="map-responsive">
+  
+             <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+                src="https://maps.google.com/maps?width=100%25&height=600&hl=es&q=La%20Paz%20Santander+()&t=&z=14&ie=UTF8&iwloc=B&output=embed">
+             </iframe>
+  
+             </div>
+
+				</div>
+			</div>
+		</div>
+      </footer>
+
+	</article>
+	
+  </section>
+	
+	
+	
+	<script src="js/sliders.js"></script>	
+	<script src="js/menu.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/extrenaljq.js"></script>
+    <script src="js/ideal-image-slider.js"></script>
+	<script src="js/form_send.js"></script>
+	
+	
+</body>
+
+</html>
